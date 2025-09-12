@@ -1,51 +1,53 @@
-C++ Command-Line Calculator
-This is a basic command-line calculator written in C++. It can perform fundamental arithmetic operations like addition, subtraction, multiplication, and division on two numbers. The program is designed to be user-friendly, handling common input errors and allowing for multiple calculations in a single session.
+# Command Line Calculator
 
-Features ✨
-Four Basic Operations: Supports +, -, *, and / for simple calculations.
+A simple command-line calculator written in **C++**.  
+This project allows users to perform basic arithmetic operations (`+`, `-`, `*`, `/`) with input validation and error handling.
 
-Error Handling: Catches common issues like non-numeric input and division by zero.
+---
 
-Looping: Allows the user to perform multiple calculations without restarting the program.
+## Features
+- Addition, subtraction, multiplication, and division
+- Input validation (prevents invalid number inputs)
+- Error handling (division by zero is not allowed)
+- User-friendly menu system
+- Looping functionality to perform multiple calculations until the user chooses to exit
 
-Clear Prompts: Provides easy-to-understand instructions for entering numbers and selecting operations.
+---
 
-How to Compile and Run 🚀
-Prerequisites
-You'll need a C++ compiler. g++ is a common choice and is often pre-installed on Linux and macOS systems. You can also use it on Windows through environments like MinGW or Cygwin.
+## Installation & Usage
 
-Compilation
-Open your terminal or command prompt, navigate to the directory where the source code is saved, and run the following command:
+1. Clone or download the project.
+2. Compile the source file:
+   ```bash
+   g++ -o calculator calculator.cpp
+Run the program:
 
-Bash
-
-g++ calculator.cpp -o calculator
-This command compiles the calculator.cpp file and creates an executable file named calculator.
-
-Running the Program
-After compiling, you can run the executable from your terminal:
-
-Bash
-
+bash
+Copy code
 ./calculator
-How to Use 🖱️
-Start the Program: Run the compiled executable as shown above.
+Example Run
+vbnet
+Copy code
+Welcome to Calculator
+Enter number: 10
+Enter number: 5
+Available options are: +, -, *, /
+Enter you choice: +
+result: 15
+Enter 1 to continue
+Enter 0 to exit
+Error Handling
+If the user enters a non-numeric value, they will be asked again until a valid number is provided.
 
-Enter Numbers: The program will prompt you to enter the first and second numbers.
+Division by zero will display an error message:
 
-Choose an Operation: You will then be asked to select an operation (+, -, *, /) from the available options.
+vbnet
+Copy code
+Error: Division by 0 is not allowed
+Author
+archf1end1
 
-View the Result: The calculated result will be displayed.
+pgsql
+Copy code
 
-Continue or Exit: After each calculation, you'll be prompted to enter '1' to continue with another calculation or '0' to exit the program.
-
-Code Breakdown 👨‍💻
-The code is structured into several functions to improve readability and maintainability:
-
-add, sub, mul, div: These functions perform the basic arithmetic operations. The div function includes a try-catch block to handle division by zero, which is crucial for preventing a crash.
-
-getNumber: This function prompts the user for a number and includes a loop to ensure the input is valid. It handles cases where the user enters text instead of a number by clearing the input stream and ignoring the invalid characters.
-
-getOption: This function prompts the user for an operation. It uses a switch statement within a loop to validate the input and ensure the user selects one of the four supported operators.
-
-main: This is the main function that drives the program. It calls the other functions, handles the main program loop, and displays the final result to the user.
+Want me to also add a **"Future Improvements"** section (like supporting more operators, power, squ
