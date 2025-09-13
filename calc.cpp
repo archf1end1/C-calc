@@ -89,9 +89,6 @@ int main() {
         case '/':
           std::cout << "result: " << div(first_num, second_num) << "\n";
           break;
-        default:
-          std::cout << "Enter vaild option: ";
-          break;
       }
     } catch (const std::runtime_error& e) {
       std::cout << "Error: " << e.what() << "\n";
